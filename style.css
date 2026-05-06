@@ -1,0 +1,211 @@
+body {
+    background: linear-gradient(
+        -45deg,
+        #0f0c29,
+        #1e3c72,
+        #2a5298,
+        #000428
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+     font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arvo', serif;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2, h3 {
+    font-weight: 700;
+}
+
+h4, h5, h6 {
+    font-weight: 400;
+}
+.display-2 {
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.fw-800 { font-weight: 800; }
+
+.navbar {
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+.text-highlight {
+    color: #00d2ff;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+}
+
+.btn-custom {
+    background: #00d2ff;
+    color: #0f0c29;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    box-shadow:
+        0 0 10px #00d2ff,
+        0 0 20px #00d2ff,
+        0 0 40px #00d2ff;
+    transform: scale(1.05);
+}
+
+.btn-outline-light {
+    border-radius: 50px;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 210, 255, 0.5);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+}
+
+.form-control::-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.1) inset;
+    -webkit-text-fill-color: #fff;
+}
+
+body {
+    padding-top: 60px;
+}
+
+.skill-badge {
+    display: inline-block;
+    margin: 8px;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.glass-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+
+    background: linear-gradient(
+        120deg,
+        #00d2ff,
+        #3a7bd5,
+        #00d2ff
+    );
+
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    opacity: 0.6;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(0, 210, 255, 0.3),
+        0 0 50px rgba(0, 210, 255, 0.2);
+}
+
+.glow-orb {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.orb1 {
+    background: #00d2ff;
+    top: 10%;
+    left: 10%;
+}
+
+.orb2 {
+    background: #3a7bd5;
+    bottom: 10%;
+    right: 10%;
+}
+
+.text-highlight {
+    color: #00d2ff;
+    text-shadow:
+        0 0 10px rgba(0, 210, 255, 0.7),
+        0 0 20px rgba(0, 210, 255, 0.5),
+        0 0 40px rgba(0, 210, 255, 0.3);
+}
+
+/* Styling for the Profile Image in Hero Section */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image perfectly round */
+    object-fit: cover; /* Ensures the image doesn't stretch */
+    border: 4px solid rgba(255, 255, 255, 0.2); /* Soft glass-like border */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adds depth */
+    display: block; /* Required for mx-auto to center */
+    margin-left: auto; /* Centers the image */
+    margin-right: auto; /* Centers the image */
+}
